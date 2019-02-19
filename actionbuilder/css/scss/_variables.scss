@@ -1,0 +1,99 @@
+//Colors
+$main-text: #202634;
+$btn-text: #212121;
+$white: #ffffff;
+$light-blue: #eaeef6;
+$medium-blue: #f7f9fc;
+$status-color: #5bc472;
+$link-color: #005dfa;
+$accent-color: #0073e6;
+$lighter-gray: #e5e7f1;
+$light-gray: #dce0ec; //border
+$medium-gray: #858ca0;
+$dark-gray: #82899e;
+
+//Fonts
+$main-font: 'Montserrat', sans-serif;
+
+//Layout
+.single-col, .double-col, .large-col, .auto-col, .full-col{
+	position: relative;
+	width: 100%;
+	padding-left: .5rem;
+	padding-right: .5rem;
+}
+
+.single-col{
+	flex: 1 1 0;
+}
+
+.stat-col{
+	flex: 0 0 3rem;
+	display: flex;
+	justify-content: center;
+}
+
+.double-col{
+	flex: 0 0 50%;
+}
+
+.large-col{
+	flex: 0 0 60%;
+}
+
+.auto-col{
+	flex: 0 0 auto;
+	width: auto;
+	max-width: none;
+}
+
+.full-col{
+	flex: 0 0 100%;
+	max-width: 100%;
+}
+
+*, ::after, ::before{
+	box-sizing: border-box;
+}
+
+//display
+.d-none{
+	display: none;
+}
+
+.d-block{
+	display: block;
+}
+
+body{
+	color: $main-text;
+	font-family: $main-font;
+	background: $light-blue;
+}
+
+h2{
+	margin: 0;
+}
+
+a{
+	color:$link-color;
+}
+
+a.disabled{
+	color: $light-gray;
+}
+
+button{
+	padding: .9rem .75rem;
+	border-radius: 5px;
+	border: none;
+	font-size: 1rem;
+	font-family: $main-font;
+	cursor: pointer;
+}
+
+a.btn-unselected i{
+	color: $medium-gray;
+	display: flex;
+	align-items: center;
+}

@@ -1,0 +1,336 @@
+.single-col, .double-col, .large-col, .auto-col, .full-col {
+  position: relative;
+  width: 100%;
+  padding-left: .5rem;
+  padding-right: .5rem; }
+
+.single-col {
+  flex: 1 1 0; }
+
+.stat-col {
+  flex: 0 0 3rem;
+  display: flex;
+  justify-content: center; }
+
+.double-col {
+  flex: 0 0 50%; }
+
+.large-col {
+  flex: 0 0 60%; }
+
+.auto-col {
+  flex: 0 0 auto;
+  width: auto;
+  max-width: none; }
+
+.full-col {
+  flex: 0 0 100%;
+  max-width: 100%; }
+
+*, ::after, ::before {
+  box-sizing: border-box; }
+
+.d-none {
+  display: none; }
+
+.d-block {
+  display: block; }
+
+body {
+  color: #202634;
+  font-family: "Montserrat", sans-serif;
+  background: #eaeef6; }
+
+h2 {
+  margin: 0; }
+
+a {
+  color: #005dfa; }
+
+a.disabled {
+  color: #dce0ec; }
+
+button {
+  padding: .9rem .75rem;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer; }
+
+a.btn-unselected i {
+  color: #858ca0;
+  display: flex;
+  align-items: center; }
+
+#holder {
+  max-width: 940px; }
+  #holder .titleRow {
+    display: flex;
+    margin-left: -.5rem;
+    margin-right: -.5rem;
+    flex-wrap: wrap; }
+    #holder .titleRow .total-column {
+      display: flex;
+      flex: 0 0 100%;
+      width: auto;
+      justify-content: space-between;
+      flex-direction: row;
+      align-items: center; }
+      #holder .titleRow .total-column #totalContacts {
+        font-size: 1.75rem;
+        white-space: nowrap;
+        font-weight: 600; }
+      #holder .titleRow .total-column #export-btn {
+        color: #005dfa;
+        background: #f7f9fc;
+        display: flex;
+        padding: .3rem .3rem;
+        font-size: .9rem;
+        align-items: center; }
+        #holder .titleRow .total-column #export-btn i {
+          font-size: 1em;
+          margin-right: .25rem; }
+    #holder .titleRow .sort-view-column {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1rem; }
+    #holder .titleRow .sort-btn {
+      color: #212121;
+      background: #ffffff;
+      border: 1px solid #dce0ec; }
+      #holder .titleRow .sort-btn i {
+        margin-right: .75rem;
+        color: #858ca0; }
+    #holder .titleRow .view-btn-set {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #ffffff;
+      border-radius: 5px;
+      padding: .75rem .9rem;
+      border: 1px solid #dce0ec; }
+      #holder .titleRow .view-btn-set .btn-title {
+        font-size: 1.125rem;
+        font-weight: 500;
+        margin: 0; }
+      #holder .titleRow .view-btn-set .view-btn-row {
+        display: flex; }
+      #holder .titleRow .view-btn-set .view-btn {
+        display: inline-block;
+        color: #0073e6;
+        margin-right: .9rem;
+        cursor: pointer; }
+        #holder .titleRow .view-btn-set .view-btn:first-of-type {
+          margin-left: 0rem; }
+        #holder .titleRow .view-btn-set .view-btn:last-of-type {
+          margin-right: 0; }
+  #holder .list-holder {
+    display: flex; }
+  #holder #contactsList {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    background: #ffffff;
+    border: 1px solid #dce0ec;
+    border-radius: 3px; }
+    #holder #contactsList > div:first-of-type {
+      margin-top: .5rem; }
+    #holder #contactsList .contactRow {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #dce0ec;
+      margin-top: 1rem;
+      margin-bottom: .5rem;
+      padding-bottom: 1.125rem;
+      flex-wrap: wrap; }
+      #holder #contactsList .contactRow:last-of-type {
+        border-bottom: none;
+        margin-bottom: 0; }
+      #holder #contactsList .contactRow .contactInfo {
+        display: flex; }
+        #holder #contactsList .contactRow .contactInfo .stat-col {
+          display: none; }
+      #holder #contactsList .contactRow .contact .contactPerson .contactName {
+        font-size: 1.125rem;
+        display: flex;
+        margin-top: 0;
+        margin-bottom: 0; }
+      #holder #contactsList .contactRow .contact .contactPerson .city-state {
+        color: #82899e;
+        text-transform: uppercase;
+        font-size: .75rem;
+        margin-top: .25rem;
+        margin-bottom: 1.125rem; }
+      #holder #contactsList .contactRow .contact .contactWays {
+        display: flex;
+        justify-content: space-between;
+        align-items: center; }
+        #holder #contactsList .contactRow .contact .contactWays .missing-info {
+          color: #dce0ec; }
+      #holder #contactsList .contactRow .contact-details {
+        display: none; }
+      #holder #contactsList .contactRow .expanderHolder {
+        display: flex; }
+      #holder #contactsList .contactRow .expander-link {
+        margin-left: .5rem;
+        margin-right: .5rem; }
+      #holder #contactsList .contactRow .expander {
+        color: #82899e;
+        transition: transform .5s; }
+    #holder #contactsList .contactRow.open .contact {
+      flex-wrap: wrap; }
+      #holder #contactsList .contactRow.open .contact .contactPerson {
+        flex: 0 0 100%; }
+        #holder #contactsList .contactRow.open .contact .contactPerson .city-state {
+          visibility: hidden; }
+      #holder #contactsList .contactRow.open .contact .contactWays {
+        display: none; }
+    #holder #contactsList .contactRow.open .contact-details {
+      display: block;
+      padding-left: 1rem; }
+      #holder #contactsList .contactRow.open .contact-details div.full-detail {
+        display: flex;
+        margin-bottom: 1.5rem; }
+        #holder #contactsList .contactRow.open .contact-details div.full-detail i {
+          color: #005dfa; }
+        #holder #contactsList .contactRow.open .contact-details div.full-detail .contact-detail-info {
+          margin-left: 1rem; }
+          #holder #contactsList .contactRow.open .contact-details div.full-detail .contact-detail-info > p {
+            margin-top: .5rem;
+            margin-bottom: 0; }
+            #holder #contactsList .contactRow.open .contact-details div.full-detail .contact-detail-info > p:first-of-type {
+              margin-top: 0; }
+        #holder #contactsList .contactRow.open .contact-details div.full-detail:last-of-type {
+          margin-bottom: 0;
+          align-items: center; }
+    #holder #contactsList .contactRow.open .expander {
+      transform: rotate(180deg); }
+  #holder #alphabet {
+    position: sticky;
+    top: 10px;
+    text-align: center;
+    padding-left: 1.25rem;
+    padding-right: .75rem;
+    margin-top: 1rem;
+    height: 80vh; }
+    #holder #alphabet p {
+      font-size: .6rem;
+      margin-top: .1rem;
+      margin-bottom: .1rem; }
+
+@media (min-width: 576px) {
+  #holder .titleRow {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between; }
+    #holder .titleRow .total-column {
+      flex: 0 0 auto;
+      width: auto;
+      justify-content: flex-start; }
+      #holder .titleRow .total-column #totalContacts {
+        padding-left: .5rem;
+        padding-right: .5rem; }
+      #holder .titleRow .total-column #exportCol {
+        flex: 0 0 auto;
+        width: auto;
+        padding-left: .5rem; }
+        #holder .titleRow .total-column #exportCol #export-btn {
+          margin-bottom: 0; }
+    #holder .titleRow .sort-view-column {
+      flex: 0 0 auto;
+      width: auto;
+      justify-content: flex-start;
+      margin-bottom: 0; }
+    #holder .titleRow .view-btn-set {
+      margin-left: 1rem; }
+      #holder .titleRow .view-btn-set .view-btn {
+        margin-top: 0; }
+  #holder .list-holder {
+    display: block; }
+  #holder #contactsList {
+    flex: 0 1 auto; }
+    #holder #contactsList .contactRow {
+      margin-top: .5rem;
+      margin-bottom: .5rem;
+      padding-bottom: 1rem; }
+      #holder #contactsList .contactRow .contactInfo {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center; }
+        #holder #contactsList .contactRow .contactInfo .status {
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+          width: 60px;
+          height: 60px;
+          color: #858ca0;
+          text-align: center; }
+        #holder #contactsList .contactRow .contactInfo .status-circle {
+          position: absolute;
+          top: 0;
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          border: 5px solid #5bc472; }
+        #holder #contactsList .contactRow .contactInfo .stat-col.no-stat .status {
+          height: 61px; }
+        #holder #contactsList .contactRow .contactInfo .stat-col.no-stat .status-circle {
+          border: 2px solid #dce0ec; }
+        #holder #contactsList .contactRow .contactInfo .contact {
+          display: flex; }
+          #holder #contactsList .contactRow .contactInfo .contact .contactPerson {
+            flex: 0 0 60%; }
+            #holder #contactsList .contactRow .contactInfo .contact .contactPerson .contactName {
+              font-size: 1.15rem;
+              margin-bottom: 0; }
+            #holder #contactsList .contactRow .contactInfo .contact .contactPerson .city-state {
+              margin-bottom: 0; }
+          #holder #contactsList .contactRow .contactInfo .contact .contactWays {
+            flex: 0 0 40%; }
+          #holder #contactsList .contactRow .contactInfo .contact .contact-details {
+            color: #82899e;
+            margin-left: 4rem; }
+            #holder #contactsList .contactRow .contactInfo .contact .contact-details .address {
+              display: block;
+              color: #82899e;
+              font-size: .95rem;
+              margin-top: .75rem;
+              margin-bottom: .5rem; }
+              #holder #contactsList .contactRow .contactInfo .contact .contact-details .address:last-of-type {
+                margin-top: 0;
+                margin-bottom: 0; }
+    #holder #contactsList .contactRow.open .contact-details {
+      display: block; }
+  #holder #alphabet {
+    display: none; } }
+@media (min-width: 768px) {
+  #holder .titleRow {
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; }
+  #holder #exportCol {
+    flex: 0 0 auto;
+    width: auto;
+    margin-bottom: 0; }
+    #holder #exportCol #export-btn {
+      font-weight: 600;
+      font-size: .75rem;
+      margin-bottom: 0; }
+  #holder #contactsList .contactRow .contactInfo .stat-col {
+    display: flex; }
+  #holder #contactsList .contactRow .contactInfo .contact .contactPerson {
+    flex: 0 0 80%; }
+    #holder #contactsList .contactRow .contactInfo .contact .contactPerson .contactName {
+      font-size: 1.25rem;
+      font-weight: 500; }
+  #holder #contactsList .contactRow .contactInfo .contact .contactWays {
+    flex: 0 0 20%; }
+  #holder #contactsList .contactRow.open .contact-details {
+    padding-left: 4.75rem; } }
+
+/*# sourceMappingURL=style.css.map */
